@@ -30,7 +30,7 @@ function addNumbers( firstNumber, secondNumber ) {
   // return firstNumber + secondNumber;
 }
 
-console.log(addNumbers(23 , 15));
+console.log('The sum of the two numbers from addNumbers is: ',addNumbers(23 , 15));
 
 
 // 4. Function to multiply three numbers & return the result
@@ -39,28 +39,37 @@ function multiplyThree( num1, num2, num3 ){
   return prod;//return the product
 }
 
-console.log(multiplyThree(20, 7, 3));
+console.log('The product of these three numbers from multiplyThree function is: ', multiplyThree(20, 7, 3));
 
 // 5. Function that will return true if a number is positive,
 //    or greater than zero, and false otherwise
 function isPositive( number ) {
   if ( number > 0 ){
-    return;
+    return true;
   }
-    return;
+    return false;
 }
 // Call the function to test each outcome (true & false)
 // Write a separate console.log statement for each outcome
 console.log( 'isPositive - should say true', isPositive(3) );
+console.log('First test is positive, so true');
 console.log( 'isPositive - should say false', isPositive(0) );
+console.log('Second test is 0, so false');
 console.log( 'isPositive - should say false', isPositive(-3) );
+console.log('Third test is negative, so false');
 
 
 // 6. Function to return the _last_ item in an array. If the
 //    array is empty, return `undefined`.
 function getLast( array ) {
-
+ if (array.length-1 === 0){ //checking to see if array is empty
+   return undefined;//returns undefined if the case
+ }
+ return array[array.length-1];//return the last item in array
 }
+
+let groceryList = ['bananas', 'apples', 'kiwis'];//created an array for example purposes
+console.log(getLast(groceryList));//run function and return kiwi 
 
 // 7. Function to find a value in an array. Return true if the
 //    value is found and false otherwise. Use a loop;
