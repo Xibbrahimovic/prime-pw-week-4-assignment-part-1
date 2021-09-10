@@ -69,7 +69,9 @@ function getLast( array ) {
 }
 
 let groceryList = ['bananas', 'apples', 'kiwis'];//created an array for example purposes
+let randomList = []
 console.log(getLast(groceryList));//run function and return kiwi
+console.log(getLast(randomList));//test empty array
 
 // 7. Function to find a value in an array. Return true if the
 //    value is found and false otherwise. Use a loop;
@@ -83,6 +85,7 @@ function find( value, array ){
 
 let drinks = ['juice', 'soda', 'water', 'beer'];
 console.log(find('water', drinks));
+console.log(find('wine', drinks));
 
 
 // ----------------------
