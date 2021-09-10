@@ -69,14 +69,21 @@ function getLast( array ) {
 }
 
 let groceryList = ['bananas', 'apples', 'kiwis'];//created an array for example purposes
-console.log(getLast(groceryList));//run function and return kiwi 
+console.log(getLast(groceryList));//run function and return kiwi
 
 // 7. Function to find a value in an array. Return true if the
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find
 function find( value, array ){
-
+  for(let i = 0; i < array.length; i++){
+    if(array[i] == value) return true;
+  }
+  return false;
 }
+
+let drinks = ['juice', 'soda', 'water', 'beer'];
+console.log(find('water', drinks));
+
 
 // ----------------------
 // Stretch Goals
